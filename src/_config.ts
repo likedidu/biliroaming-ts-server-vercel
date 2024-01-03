@@ -204,7 +204,7 @@ export const db_local_enabled: io = 1;
 export const local_cache_secret = process.env.local_cache_secret || "";
 //PostgreSQL配置(需Read/Write权限)
 import { Pool } from "@neondatabase/serverless"; //导入(不用改)
-export const db_bitio_enabled: io = 0; //启用postgresql数据库
+export const db_bitio_enabled: io = 1; //启用postgresql数据库
 const connectionString = //三种配置方法
   process.env.POSTGRES_URL || //在Vercel项目Storage里连接数据库，并将上方 db_bitio_enabled 设为1
   process.env.db_bitio_pool || //配置环境变量 db_bitio_pool 为下方格式
